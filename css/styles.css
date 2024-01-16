@@ -1,0 +1,139 @@
+/* -----------------
+Tabla de contenidos:
+--------------------
+1. Fuente ................ 11
+2. Variables ............. 17
+3. Estilos generales ..... 32
+-------------------- 
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+
+/* ----- Variables ----- */
+* {
+  /* ### Colores primarios */
+  --soft-blue: hsl(217, 41%, 90%);
+  --cyan: hsl(178, 100%, 50%);
+
+  /* ### Colores neutrales */
+  --very-dark-blue: hsl(217, 54%, 11%);
+  --very-dark-blue-c: hsl(216, 50%, 16%);
+  --very-dark-blue-l: hsl(215, 32%, 27%);
+  --white: hsl(0, 0%, 100%);
+  /* ----------------------------- */
+  /* ----- Estilos generales ----- */
+  /* ----------------------------- */
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Outfit", sans-serif;
+  background-color: var(--very-dark-blue);
+  color: var(--white);
+}
+
+.box {
+  overflow: hidden;
+  padding: 25px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 25px;
+  background-color: var(--very-dark-blue-c);
+  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.13);
+}
+image-box {
+  width: 100%;
+  position: relative;
+  max-width: 300px;
+}
+.image-box > img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.image-box:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+h1 {
+  align-self: flex-start;
+  margin-top: 25px;
+  margin-bottom: 5px;
+  font-size: 1.35rem;
+}
+h1:hover {
+  cursor: pointer;
+  color: var(--cyan);
+}
+.description {
+  font-size: 18px;
+  font-weight: 200;
+  color: hsla(240, 86%, 94%, 0.603);
+}
+.details {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.price {
+  font-weight: bolder;
+  display: flex;
+  align-items: center;
+}
+.price > span {
+  margin-left: 7px;
+  color: var(--cyan);
+}
+.days {
+  display: flex;
+  align-items: center;
+}
+.days > span {
+  margin-left: 7px;
+  color: hsla(240, 86%, 94%, 0.603);
+}
+.avatar {
+  width: 100%;
+  border-top: 1px solid hsla(240, 86%, 94%, 0.603);
+  display: flex;
+  align-items: center;
+  padding-top: 10px;
+  margin-top: 25px;
+  margin-bottom: 0px;
+}
+.avatar > img {
+  width: 12%;
+  height: fit-content;
+  border: 1px solid var(--white);
+  margin-right: 15px;
+  border-radius: 50%;
+}
+.avatar > p {
+  font-weight: 200;
+  color: hsla(240, 86%, 94%, 0.603);
+}
+.name {
+  font-weight: 400;
+  color: var(--white);
+}
+.name:hover {
+  cursor: pointer;
+  color: var(--cyan);
+}
+
+@media screen and (max-width: 450px) {
+  .box {
+    width: 250px;
+  }
+}
